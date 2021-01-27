@@ -39,3 +39,7 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+
+# A Ruby static code analyzer and formatter, based on the community Ruby style guide.
+gem 'rubocop', '~>0.81'
