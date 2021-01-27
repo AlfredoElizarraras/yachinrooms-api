@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::API
   include ActionController::Cookies
   include ActionController::RequestForgeryProtection
+  include ActionController::HttpAuthentication::Token::ControllerMethods
   include Response
   include ExceptionHandler
 
