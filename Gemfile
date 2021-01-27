@@ -62,3 +62,6 @@ gem 'rubocop', '~>0.81'
 
 # Flexible authentication solution for Rails with Warden.
 gem 'devise'
+
+# A ruby implementation of the RFC 7519 OAuth JSON Web Token (JWT) standard.
+gem 'jwt'
