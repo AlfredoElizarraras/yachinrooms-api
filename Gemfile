@@ -58,7 +58,7 @@ end
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 # A Ruby static code analyzer and formatter, based on the community Ruby style guide.
-gem 'rubocop', '~>0.81'
+gem 'rubocop', '~>0.81.0'
 
 # Flexible authentication solution for Rails with Warden.
 gem 'devise'

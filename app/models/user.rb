@@ -6,7 +6,7 @@ class User < ApplicationRecord
 
   validates :username, presence: true
   validates :username, length: { minimum: 3,
-                                 maximum: 10, }
+                                 maximum: 10 }
   validates :username, uniqueness: { case_sensitive: true }
 
   def generate_token
