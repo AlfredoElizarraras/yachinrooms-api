@@ -9,6 +9,8 @@ class User < ApplicationRecord
                                  maximum: 10 }
   validates :username, uniqueness: { case_sensitive: true }
 
+  has_many :rooms, dependent: :destroy, foreign_key: :host_id
+
   def generate_token
     JWT.encode({ id: id,
                  exp: 2.days.from_now.to_i },
