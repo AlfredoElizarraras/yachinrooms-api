@@ -2,7 +2,7 @@ class CreateRooms < ActiveRecord::Migration[6.0]
   def change
     create_table :rooms do |t|
       t.references :host, null: false, index: true, foreign_key: { to_table: :users }
-      t.string :adress, null: false
+      t.string :address, null: false
       t.string :description
       t.decimal :fee, null: false
       t.decimal :latitude, null: false, precision: 8, scale: 6

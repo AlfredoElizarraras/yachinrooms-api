@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 2021_01_29_084833) do
 
   create_table "rooms", force: :cascade do |t|
     t.bigint "host_id", null: false
-    t.string "adress", null: false
+    t.string "address", null: false
     t.string "description"
     t.decimal "fee", null: false
     t.decimal "latitude", precision: 8, scale: 6, null: false
