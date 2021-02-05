@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "Rooms", type: :request do
+RSpec.describe 'Rooms', type: :request do
   let!(:user) { create :user }
   let!(:rooms) { create_list(:room, 70, host_id: user.id) }
   let(:room_id) { rooms.first.id }
@@ -41,7 +41,7 @@ RSpec.describe "Rooms", type: :request do
       it 'is expected to respond with status 200' do
         expect(response).to have_http_status(200)
       end
-      
+
       it 'is expected to return rooms' do
         expect(json['rooms']).not_to be_empty
       end
@@ -60,7 +60,7 @@ RSpec.describe "Rooms", type: :request do
         permited_params = { indexing: { page: 3 } }
         get '/api/rooms', params: permited_params
       end
-      
+
       it 'is expected to return with status 200' do
         expect(response).to have_http_status(200)
       end
@@ -79,7 +79,7 @@ RSpec.describe "Rooms", type: :request do
         permited_params = { indexing: { per_page: 3 } }
         get '/api/rooms', params: permited_params
       end
-      
+
       it 'is expected to return with status 200' do
         expect(response).to have_http_status(200)
       end
@@ -110,11 +110,11 @@ RSpec.describe "Rooms", type: :request do
 
     context 'when the record doesn\'t exists' do
       let(:room_id) { 0 }
-      
+
       it 'return status code 404' do
         expect(response).to have_http_status(404)
       end
-      
+
       it 'return a not found message' do
         expect(json['message']).to match(/Couldn't find Room with 'id'=.*/)
       end
